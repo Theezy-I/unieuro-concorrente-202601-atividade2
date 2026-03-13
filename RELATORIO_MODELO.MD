@@ -1,9 +1,13 @@
-# Relatório da NOME DA ATIVIDADE
+# Relatório do concorrente-202601-atividade2
 
 **Disciplina: PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA** 
+
 **Aluno(s): Arthur Dias**
+
 **Turma:Manhã**
+
 **Professor:Rafael**
+
 **Data: 13/03/26**
 
 ---
@@ -12,21 +16,45 @@
 
 Descreva o problema computacional resolvido pelo programa.
 
+O problema computacional resolvido por este programa consiste em realizar a leitura e a soma total de uma sequência massiva de números inteiros armazenados em um arquivo de texto. O objetivo principal da aplicação não é apenas calcular o resultado matemático, mas sim atuar como uma ferramenta de benchmarking para comparar o tempo de execução entre uma abordagem de processamento sequencial (serial) e uma abordagem de processamento concorrente (paralela) variando o número de threads/processos.
+
 ## Orientações para preenchimento
 
 Explique:
 
 * Qual problema foi implementado
+
+O problema implementado foi a leitura de um arquivo de texto de grande escala e a soma de todos os números inteiros contidos nele. A implementação foca em comparar o tempo gasto para resolver esse problema usando apenas 1 processo (serial) versus múltiplos processos (paralelo).
+
 * Qual algoritmo foi utilizado
+
+Foi utilizado o algoritmo de soma linear (acumulação de valores iterativa). Na abordagem paralela, aplicou-se o modelo de "divisão e conquista", onde a lista principal é fatiada em pedaços menores, somada individualmente por cada processo, e depois os subtotais são somados no final.
+
 * Qual o tamanho da entrada utilizada nos testes
+
+Nos testes de análise de desempenho, a entrada utilizada foi o arquivo numero2.txt, que possui um volume exato de 10.000.000 (10 milhões) de linhas, contendo um número inteiro por linha.
+
 * Qual o objetivo da paralelização
+
+O objetivo foi tentar diminuir o tempo total da operação distribuindo a carga de trabalho entre os vários núcleos do processador da máquina, além de permitir o cálculo do Speedup e da Eficiência para fins de estudo acadêmico.
 
 **Questões que devem ser respondidas:**
 
 * Qual é o objetivo do programa?
+
+O programa tem o objetivo de servir como uma ferramenta de benchmarking (teste de desempenho). Ele mede, em segundos, a diferença de velocidade entre executar uma tarefa matemática simples de forma sequencial contra executá-la de forma paralela (com 2, 4, 8 e 12 processos).
+
 * Qual o volume de dados processado?
+
+O volume processado é de 10 milhões de registros (números inteiros).
+
 * Qual algoritmo foi utilizado?
+
+Algoritmo de soma linear particionada com complexidade O(N).
+
 * Qual a complexidade aproximada do algoritmo?
+
+A complexidade de tempo é O(N) (linear). Sendo N o número total de elementos no arquivo (10 milhões), o algoritmo precisa iterar por cada número exatamente uma vez para chegar ao resultado final, independentemente de estar rodando em 1 processo ou dividido em 12 processos.
 
 ---
 
@@ -281,6 +309,7 @@ Implementar blocos de Memória Compartilhada (Shared Memory), evitando que o pro
 Aplicar o paralelismo apenas em tarefas "CPU-Bound" (que exigem muito cálculo matemático pesado, como criptografia ou processamento de imagens) e não em tarefas simples de soma que são limitadas apenas pelo acesso à memória.
 
 ---
+
 
 
 
