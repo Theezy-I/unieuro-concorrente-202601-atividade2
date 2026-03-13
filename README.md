@@ -72,7 +72,7 @@ Informar as características do hardware e software utilizados na execução dos
 | Número de núcleos           |6 núcleos físicos (12 threads lógicas)|
 | Memória RAM                 |16,0 GB|
 | Sistema Operacional         |Windows 11 Pro|
-| Linguagem utilizada         |Python 3.12.4)|
+| Linguagem utilizada         |Python 3.12.4|
 | Biblioteca de paralelização |concurrent.futures (ProcessPoolExecutor)|
 | Compilador / Versão         |Interpretador CPython padrão|
 
@@ -92,15 +92,15 @@ Utilizou-se a função time.time() da biblioteca nativa time do Python. O cronô
 
 * Quantas execuções foram realizadas
 
-Foi executada uma rodada de testes em lote (batch) através de um script automatizado, rodando uma vez para cada configuração sequencialmente na memória RAM, sem utilizar média de múltiplas execuções, pois o ambiente de laboratório estava dedicado e ocioso.
+Foi executada uma rodada de testes em lote (batch) através de um script automatizado, rodando uma vez para cada configuração sequencialmente na memória RAM.
 
 * Se foi utilizada média dos tempos
 
-O teste foi realizado utilizando o arquivo numero2.txt, que contém exatos 10.000.000 (10 milhões) de números inteiros para serem somados.
+Não foi utilizada média de múltiplas execuções. Como o ambiente de laboratório estava dedicado e ocioso, e os dados foram carregados direto na RAM, o tempo absoluto de uma única execução foi suficiente e preciso para a análise.
 
 * Qual tamanho da entrada foi usado
 
-Para garantir a precisão do desempenho do processador, o arquivo de 10 milhões de linhas foi lido do disco e carregado na memória RAM apenas uma vez antes dos testes iniciarem.
+O teste foi realizado utilizando o arquivo numero2.txt, que contém exatos 10.000.000 (10 milhões) de números inteiros para serem somados.
 
 ### Configurações testadas
 
@@ -317,6 +317,7 @@ Implementar blocos de Memória Compartilhada (Shared Memory), evitando que o pro
 Aplicar o paralelismo apenas em tarefas "CPU-Bound" (que exigem muito cálculo matemático pesado, como criptografia ou processamento de imagens) e não em tarefas simples de soma que são limitadas apenas pelo acesso à memória.
 
 ---
+
 
 
 
