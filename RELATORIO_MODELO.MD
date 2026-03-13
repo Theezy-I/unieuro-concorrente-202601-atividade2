@@ -1,9 +1,9 @@
 # Relatório da NOME DA ATIVIDADE
 
-**Disciplina: PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA ** 
-**Aluno(s): Arthur Dias **
-**Turma:Manhã  **
-**Professor:Rafael **
+**Disciplina: PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA** 
+**Aluno(s): Arthur Dias**
+**Turma:Manhã**
+**Professor:Rafael**
 **Data: 13/03/26**
 
 ---
@@ -59,13 +59,19 @@ Os experimentos foram conduzidos de forma a isolar o tempo de cálculo matemáti
 Descrever:
 
 * Como o tempo de execução foi medido
+
 Utilizou-se a função time.time() da biblioteca nativa time do Python. O cronômetro foi iniciado logo antes da execução da soma (ou da distribuição dos processos) e parado imediatamente após o retorno do resultado final.
 
 * Quantas execuções foram realizadas
+
 Foi executada uma rodada de testes em lote (batch) através de um script automatizado, rodando uma vez para cada configuração sequencialmente na memória RAM, sem utilizar média de múltiplas execuções, pois o ambiente de laboratório estava dedicado e ocioso.
+
 * Se foi utilizada média dos tempos
+
 O teste foi realizado utilizando o arquivo numero2.txt, que contém exatos 10.000.000 (10 milhões) de números inteiros para serem somados.
+
 * Qual tamanho da entrada foi usado
+
 Para garantir a precisão do desempenho do processador, o arquivo de 10 milhões de linhas foi lido do disco e carregado na memória RAM apenas uma vez antes dos testes iniciarem.
 
 ### Configurações testadas
@@ -261,4 +267,5 @@ Implementar blocos de Memória Compartilhada (Shared Memory), evitando que o pro
 Aplicar o paralelismo apenas em tarefas "CPU-Bound" (que exigem muito cálculo matemático pesado, como criptografia ou processamento de imagens) e não em tarefas simples de soma que são limitadas apenas pelo acesso à memória.
 
 ---
+
 
