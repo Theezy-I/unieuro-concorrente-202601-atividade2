@@ -141,11 +141,11 @@ Preencha a tabela com os **tempos médios de execução** obtidos.
 
 | Nº Threads/Processos | Tempo de Execução (s) |
 | -------------------- | --------------------- |
-| 1                    |                       |
-| 2                    |                       |
-| 4                    |                       |
-| 8                    |                       |
-| 12                   |                       |
+| 1                    | 0.0423                |
+| 2                    | 0.5117                |
+| 4                    | 0.3403                |
+| 8                    | 0.3329                |
+| 12                   | 0.4065                |
 
 ---
 
@@ -182,11 +182,11 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
-| 1                 |           | 1.0     | 1.0        |
-| 2                 |           |         |            |
-| 4                 |           |         |            |
-| 8                 |           |         |            |
-| 12                |           |         |            |
+| 1                 | 0.0423    | 1.00    | 1.00       |
+| 2                 | 0.5117    | 0.08    | 0.04       |
+| 4                 | 0.3403    | 0.12    | 0.03       |
+| 8                 | 0.3329    | 0.13    | 0.02       |
+| 12                | 0.4065    | 0.10    | 0.01       |
 
 ---
 
@@ -317,6 +317,7 @@ Implementar blocos de Memória Compartilhada (Shared Memory), evitando que o pro
 Aplicar o paralelismo apenas em tarefas "CPU-Bound" (que exigem muito cálculo matemático pesado, como criptografia ou processamento de imagens) e não em tarefas simples de soma que são limitadas apenas pelo acesso à memória.
 
 ---
+
 
 
 
