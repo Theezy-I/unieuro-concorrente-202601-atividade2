@@ -117,8 +117,16 @@ Os experimentos devem ser realizados nas seguintes configurações:
 Descrever:
 
 * Número de execuções para cada configuração
+
+Foi realizada uma única execução contínua para cada configuração exigida (1, 2, 4, 8 e 12 processos), todas englobadas na mesma rotina do script.
+
 * Forma de cálculo da média
+
+Como os testes foram realizados num ambiente isolado e estritamente controlado para minimizar interferências externas, registou-se o tempo absoluto de execução para cada cenário. Não foi efetuada a média de múltiplas execuções, dado que a variação de tempo em ambiente dedicado para este tipo de cálculo em memória RAM é estatisticamente irrelevante para a conclusão do fenómeno de overhead.
+
 * Condições de execução (ex: máquina dedicada, carga do sistema, etc.)
+
+Os testes decorreram numa máquina de laboratório dedicada. Para garantir a fiabilidade dos resultados, a carga do sistema operativo foi reduzida ao mínimo possível (encerrando navegadores web, IDEs e outras aplicações em segundo plano), permitindo que o processador dedicasse os seus recursos à execução do script. Além disso, implementou-se o isolamento de operações de entrada e saída (I/O): todo o conteúdo do ficheiro de 10 milhões de linhas foi carregado integralmente para a memória RAM antes do início do cronómetro, assegurando que o tempo medido reflete exclusivamente o poder de processamento computacional e a gestão de processos, sem os atrasos provocados pela leitura do disco rígido.
 
 ---
 
@@ -309,6 +317,7 @@ Implementar blocos de Memória Compartilhada (Shared Memory), evitando que o pro
 Aplicar o paralelismo apenas em tarefas "CPU-Bound" (que exigem muito cálculo matemático pesado, como criptografia ou processamento de imagens) e não em tarefas simples de soma que são limitadas apenas pelo acesso à memória.
 
 ---
+
 
 
 
